@@ -65,7 +65,7 @@ function Index() {
         {revealed && (
           <>
             <p className="font-script text-3xl md:text-4xl text-crossandra animate-reveal-up">
-              with all our love, this day belongs to
+              with all my love, this day belongs to
             </p>
             <h1
               className="font-display font-black text-7xl md:text-9xl leading-[0.95] mt-4 animate-reveal-up shimmer-text"
@@ -250,15 +250,15 @@ function Index() {
             · FROM US, TO YOU ·
           </p>
           <blockquote className="font-display italic text-3xl md:text-5xl text-maroon leading-snug mt-6">
-            "Thank you for the love you gave us without ever counting it,
+            "Thank you for the love you gave me without ever counting it,
             <br />
             <span className="font-script not-italic text-crossandra-deep text-4xl md:text-6xl">
-              and for being our first idea of home."
+              and for being my first idea of home."
             </span>
           </blockquote>
           <div className="mt-12 inline-block">
             <div className="font-script text-3xl text-ink">
-              with all our love,
+              with all my love,
             </div>
             <div className="font-display text-4xl md:text-5xl text-crossandra-deep mt-2">
               your child ♡
