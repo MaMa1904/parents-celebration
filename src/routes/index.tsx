@@ -5,7 +5,8 @@ import { Confetti, FloatingPetals } from "@/components/Confetti";
 import { Countdown } from "@/components/Countdown";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import garland from "@/assets/garland.png";
-import flowers from "@/assets/flowers.jpg";
+import wedding2003 from "@/assets/wedding-2003.jpg";
+import flowerFrame from "@/assets/flower-frame.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -149,16 +150,26 @@ function Index() {
           </h2>
 
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <div className="relative aspect-square w-full max-w-[460px] mx-auto">
+              {/* photo inside the frame */}
+              <div className="absolute inset-[14%] overflow-hidden rounded-full shadow-[var(--shadow-frame)]">
+                <img
+                  src={wedding2003}
+                  alt="Maa & Paa on their wedding day, 2003"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* decorative flower frame overlay */}
               <img
-                src={flowers}
-                alt="crossandra flowers"
-                width={1536}
+                src={flowerFrame}
+                alt=""
+                width={1024}
                 height={1024}
                 loading="lazy"
-                className="rounded-2xl shadow-[var(--shadow-frame)] rotate-[-2deg]"
+                className="relative w-full h-full pointer-events-none select-none drop-shadow-[0_8px_20px_rgba(120,40,20,0.25)]"
               />
-              <div className="absolute -bottom-6 -right-6 bg-marigold text-maroon font-stamp tracking-widest text-sm px-5 py-3 rounded-full shadow-md rotate-6">
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-marigold text-maroon font-stamp tracking-widest text-sm px-5 py-3 rounded-full shadow-md">
                 EST. 2003
               </div>
             </div>
@@ -250,7 +261,7 @@ function Index() {
               with all our love,
             </div>
             <div className="font-display text-4xl md:text-5xl text-crossandra-deep mt-2">
-              your children ♡
+              your child ♡
             </div>
           </div>
         </div>
