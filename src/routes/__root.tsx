@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "Happy Marriahe Anniversary" },
       { name: "description", content: "Lovable Generated Project" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
+      { property: "og:title", content: "Happy Marriahe Anniversary" },
       { property: "og:description", content: "Lovable Generated Project" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Happy Marriahe Anniversary" },
+      { name: "twitter:description", content: "Lovable Generated Project" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/466794fb-a6f8-41c1-8350-c7ce71701b11/id-preview-f84ab1c5--9eb706d4-dd16-444e-83e6-9776d861414a.lovable.app-1779669056659.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/466794fb-a6f8-41c1-8350-c7ce71701b11/id-preview-f84ab1c5--9eb706d4-dd16-444e-83e6-9776d861414a.lovable.app-1779669056659.png" },
     ],
     links: [
       {
