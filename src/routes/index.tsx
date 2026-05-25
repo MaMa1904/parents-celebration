@@ -211,7 +211,7 @@ function Index() {
           {[
             { n: "23", l: "years strong" },
             { n: "8395", l: "shared sunrises" },
-            { n: "∞", l: "cups of chai" },
+            { n: "∞", l: "cups of coffee" },
             { n: "1", l: "forever love" },
           ].map((m, i) => (
             <div
