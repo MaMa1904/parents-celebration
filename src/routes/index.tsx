@@ -2,10 +2,24 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { CurtainReveal } from "@/components/CurtainReveal";
 import { Confetti, FloatingPetals } from "@/components/Confetti";
-import { Countdown } from "@/components/Countdown";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import garland from "@/assets/garland.png";
 import wedding2003 from "@/assets/wedding-2003.jpg";
+import memory1 from "@/assets/memory-1.jpg";
+import memory2 from "@/assets/memory-2.jpg";
+import memory3 from "@/assets/memory-3.jpg";
+import memory4 from "@/assets/memory-4.jpg";
+import memory5 from "@/assets/memory-5.jpg";
+import memory6 from "@/assets/memory-6.jpg";
+
+const memoryPhotos = [
+  { src: memory1, caption: "the very beginning", rotation: -6 },
+  { src: memory2, caption: "our little world", rotation: 4 },
+  { src: memory5, caption: "still you, still me", rotation: -3 },
+  { src: memory3, caption: "temple trips together", rotation: 5 },
+  { src: memory4, caption: "three of us, always", rotation: -5 },
+  { src: memory6, caption: "wherever, together", rotation: 3 },
+];
 import flowerFrame from "@/assets/flower-frame.png";
 
 export const Route = createFileRoute("/")({
@@ -197,7 +211,7 @@ function Index() {
           {[
             { n: "23", l: "years strong" },
             { n: "8395", l: "shared sunrises" },
-            { n: "∞", l: "cups of chai" },
+            { n: "∞", l: "cups of coffee" },
             { n: "1", l: "forever love" },
           ].map((m, i) => (
             <div
@@ -214,15 +228,6 @@ function Index() {
         </div>
       </section>
 
-      {/* COUNTDOWN */}
-      <section className="relative py-20 px-6 text-center">
-        <p className="font-stamp tracking-[0.4em] text-crossandra text-sm">· COUNTING DOWN ·</p>
-        <h2 className="font-display text-4xl md:text-6xl text-maroon mt-3 mb-10">
-          until the big day
-        </h2>
-        <Countdown />
-      </section>
-
       {/* GALLERY */}
       <section className="relative py-24 px-6 max-w-6xl mx-auto" ref={gallery.ref}>
         <div className={gallery.vis ? "" : "opacity-0"}>
@@ -232,11 +237,10 @@ function Index() {
               <span className="font-script italic text-crossandra-deep">a few</span> memories
             </h2>
             <p className="font-romance italic text-xl text-ink/70 mt-4 max-w-xl mx-auto">
-              Tap any polaroid. (Photos can be swapped in — these frames are
-              waiting for the real ones.)
+              Twenty-three years, captured in little frames. Tap any one.
             </p>
           </div>
-          {gallery.vis && <PhotoGallery />}
+          {gallery.vis && <PhotoGallery photos={memoryPhotos} />}
         </div>
       </section>
 
