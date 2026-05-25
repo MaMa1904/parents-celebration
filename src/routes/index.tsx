@@ -228,15 +228,6 @@ function Index() {
         </div>
       </section>
 
-      {/* COUNTDOWN */}
-      <section className="relative py-20 px-6 text-center">
-        <p className="font-stamp tracking-[0.4em] text-crossandra text-sm">· COUNTING DOWN ·</p>
-        <h2 className="font-display text-4xl md:text-6xl text-maroon mt-3 mb-10">
-          until the big day
-        </h2>
-        <Countdown />
-      </section>
-
       {/* GALLERY */}
       <section className="relative py-24 px-6 max-w-6xl mx-auto" ref={gallery.ref}>
         <div className={gallery.vis ? "" : "opacity-0"}>
@@ -246,11 +237,10 @@ function Index() {
               <span className="font-script italic text-crossandra-deep">a few</span> memories
             </h2>
             <p className="font-romance italic text-xl text-ink/70 mt-4 max-w-xl mx-auto">
-              Tap any polaroid. (Photos can be swapped in — these frames are
-              waiting for the real ones.)
+              Twenty-three years, captured in little frames. Tap any one.
             </p>
           </div>
-          {gallery.vis && <PhotoGallery />}
+          {gallery.vis && <PhotoGallery photos={memoryPhotos} />}
         </div>
       </section>
 
