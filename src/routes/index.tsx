@@ -2,10 +2,24 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { CurtainReveal } from "@/components/CurtainReveal";
 import { Confetti, FloatingPetals } from "@/components/Confetti";
-import { Countdown } from "@/components/Countdown";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import garland from "@/assets/garland.png";
 import wedding2003 from "@/assets/wedding-2003.jpg";
+import memory1 from "@/assets/memory-1.jpg";
+import memory2 from "@/assets/memory-2.jpg";
+import memory3 from "@/assets/memory-3.jpg";
+import memory4 from "@/assets/memory-4.jpg";
+import memory5 from "@/assets/memory-5.jpg";
+import memory6 from "@/assets/memory-6.jpg";
+
+const memoryPhotos = [
+  { src: memory1, caption: "the very beginning", rotation: -6 },
+  { src: memory2, caption: "our little world", rotation: 4 },
+  { src: memory5, caption: "still you, still me", rotation: -3 },
+  { src: memory3, caption: "temple trips together", rotation: 5 },
+  { src: memory4, caption: "three of us, always", rotation: -5 },
+  { src: memory6, caption: "wherever, together", rotation: 3 },
+];
 import flowerFrame from "@/assets/flower-frame.png";
 
 export const Route = createFileRoute("/")({
